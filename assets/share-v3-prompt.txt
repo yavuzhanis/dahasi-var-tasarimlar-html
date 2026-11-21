@@ -1,0 +1,6 @@
+Tool: built-in image_gen (edit)
+Input: assets/share-v2.png
+Output: assets/share-v3.png (1731 × 909)
+
+Prompt:
+Use case: text-localization. Edit target: attached existing Kapadokya Üniversitesi DAHASI VAR! social sharing banner. Preserve the university logo, photo, people, overall dark navy composition, large DAHASI VAR! headline and Geleceğine bir şey daha kat. tagline exactly. Change ONLY the footer row of program labels and colored horizontal rules: replace the existing three columns with FOUR evenly spaced columns spanning the same width. Exact labels left to right: "Yandal", "Mikro Yeterlilik", "SEM", "KÜN Kariyer". Use white matching bold sans serif text and blue, teal, purple, warm orange thin lines respectively. Ensure SEM has no KÜN prefix. Keep every text accent and spelling exact. Preserve landscape 1200x630 aspect ratio and crop, no extra additions.

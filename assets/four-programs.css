@@ -1,0 +1,119 @@
+/* Shared fourth-program additions, scoped to each original design. */
+:root{--career:#b9531b;--career-light:#f7d8be}
+
+/* Açık Atölye: keep each photograph readable in a two-by-two collage. */
+.studio-collage{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 22px;padding-block:55px 48px}
+.studio-collage .studio-door{margin:0}
+.studio-door-yandal{transform:rotate(-5deg) translateY(9px)}
+.studio-door-mikro{transform:rotate(4deg)}
+.studio-door-sem{transform:rotate(3deg)}
+.studio-door-kariyer{transform:rotate(-3deg) translateY(9px);z-index:2}
+.studio-collage .studio-door-image{height:clamp(160px,16vw,225px)}
+.studio-collage .studio-door-label strong{font-size:clamp(1.3rem,2vw,1.8rem)}
+.studio-door-kariyer .studio-door-seal{background:var(--career);color:white}
+.studio-collage .studio-door:hover{transform:rotate(0) translateY(-8px)}
+
+/* Kendi Rotan and Yeni Sayfa. */
+.route-tile-kariyer{background:var(--career-light)}
+.route-option-kariyer .route-option-content>figure::after{background:var(--career-light)}
+.route-intentions{grid-template-columns:repeat(4,minmax(0,1fr))}
+.editorial-reading-nav{flex-wrap:wrap}
+
+/* The shared discovery page and the fourth long-form feature. */
+.campaign-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card-kariyer{--accent:var(--career);--accent-ink:var(--career)}
+.feature-kariyer{--feature-accent:var(--career);--feature-ink:var(--career);background:#fff8f1;color:var(--ink)}
+.feature-kariyer .feature-visual{order:2}
+.feature-kariyer .feature-copy{order:1}
+.feature-kariyer .feature-visual::before{inset:22px -17px -17px 22px}
+.feature-kariyer .feature-plus{left:-20px;right:auto}
+
+/* Dört Kapı: retain physical doors and give each program its own accent. */
+body.gateway-body:not(.gateway-with-details) .door-kariyer{--door-accent:#e98b4d;--door-paint:#6b321b;--door-trim:#bf642d}
+body.gateway-body:not(.gateway-with-details) .portal-doors{grid-template-columns:repeat(4,minmax(0,1fr));width:min(1200px,100%);gap:26px}
+body.gateway-body:not(.gateway-with-details) .program-info-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+body.gateway-body:not(.gateway-with-details) .door-copy{inset-inline:24px}
+body.gateway-body:not(.gateway-with-details) .door-category{font-size:11px;letter-spacing:.04em}
+body.gateway-body:not(.gateway-with-details) .door-kariyer .door-enter{background:white;color:#6b321b}
+
+/* Dört Kemer: four arches on wide screens; two columns on phones. */
+.portal-hero[data-theme="kariyer"]{--portal-accent:#e98b4d}
+.gateway-with-details .door-kariyer{--door-accent:#e98b4d;height:96%}
+.gateway-with-details .portal-layout{grid-template-columns:.7fr 1.3fr;column-gap:40px}
+.gateway-with-details .portal-doors{gap:14px}
+.gateway-with-details .door-copy{left:13px;right:12px}
+.gateway-with-details .door-copy strong{font-size:1.25rem}
+.gateway-with-details .door-category{letter-spacing:0}
+.door-kariyer .door-photo img,.studio-door-kariyer img,.path-kariyer .path-photo{object-position:60% center}
+
+/* Four-program miniatures on the comparison page. */
+.review-photos img{width:calc((100% - 18px)/4);min-width:0}
+.review-night .review-photos img:first-child,.review-night .review-photos img:not(:first-child){width:calc((100% - 12px)/4)}
+.review-photos img:nth-child(4){transform:rotate(9deg);border-color:var(--career)}
+.review-night .review-photos img:nth-child(4){transform:none}
+.review-physical-doors{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:340px}
+.review-physical-doors>span:nth-child(4){background:#6b321b;border-color:#e98b4d}
+.review-arch-doors img:nth-child(4){height:195px;border-color:#e98b4d}
+.review-route-board>span:nth-child(4){background:var(--career-light);color:#103c38}
+
+@media(max-width:1250px){
+    .gateway-with-details .portal-layout{grid-template-columns:1fr;grid-template-areas:'copy' 'doors' 'actions';row-gap:28px}
+    .gateway-with-details .portal-copy{align-self:auto;max-width:750px}
+    .gateway-with-details .portal-copy h1{font-size:clamp(4rem,12vw,8rem)}
+    .gateway-with-details .portal-copy h1 span{display:inline}
+    .gateway-with-details .portal-description{max-width:680px;min-height:0}
+    .gateway-with-details .portal-doors{height:clamp(260px,42svh,440px)}
+}
+@media(max-width:1100px){
+    .path-stage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-height:0}
+    .path-stage .path-card{min-height:360px}
+    .path-stage.is-enhanced .path-card{min-height:340px}
+    .route-intentions{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .campaign-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    body.gateway-body:not(.gateway-with-details) .portal-doors{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;gap:32px}
+    body.gateway-body:not(.gateway-with-details) .program-info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .explore-page .header{height:auto;min-height:100px;flex-wrap:wrap;padding-block:20px;gap:18px}
+    .explore-page .nav{order:5;flex-basis:100%;justify-content:space-between;margin:0}
+    .explore-page .header-contact{margin-left:auto}
+}
+@media(max-width:760px){
+    .campaign-grid{grid-template-columns:1fr}
+    .feature-kariyer .feature-visual,.feature-kariyer .feature-copy{order:0}
+    .feature-kariyer .feature-visual{margin-left:10px;margin-right:0}
+    .feature-kariyer .feature-visual::before{inset:14px -10px -10px 14px}
+    .feature-kariyer .feature-plus{left:-10px}
+    .gateway-with-details .portal-layout{row-gap:23px}
+    .gateway-with-details .portal-doors{height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px 14px;padding-block:8px}
+    .gateway-with-details .portal-door{height:clamp(225px,58vw,330px)}
+    .gateway-with-details .portal-door.is-active{transform:translateY(-3px)}
+    .gateway-with-details .door-copy strong{font-size:1.15rem}
+}
+@media(max-width:700px){
+    body.gateway-body:not(.gateway-with-details) .portal-doors{grid-template-columns:1fr;max-width:320px;gap:30px}
+    body.gateway-body:not(.gateway-with-details) .program-info-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+    .studio-collage{max-width:460px;gap:20px 16px}
+    .studio-collage .studio-door-image{height:clamp(145px,42vw,205px)}
+    .studio-collage .studio-door-label strong{font-size:clamp(1.2rem,4.8vw,1.5rem)}
+    .path-stage{grid-template-columns:1fr}
+    .path-stage .path-card{min-height:330px}
+    .path-stage.is-enhanced .path-card{min-height:160px}
+    .path-stage.is-enhanced .path-card.is-active{min-height:380px}
+    .review-studio,.review-night,.review-arches{flex-direction:column;align-items:stretch;gap:22px}
+    .review-studio>strong,.review-night>strong,.review-arches>strong{max-width:none;font-size:3rem;display:flex;flex-wrap:wrap;gap:10px}
+    .review-photos,.review-night .review-photos,.review-arch-doors{width:100%;max-width:none}
+    .review-photos img{height:150px}
+    .review-photos img:nth-child(2){height:175px}
+    .review-night .review-photos img{height:170px}
+    .review-physical-doors{width:100%;gap:8px}
+    .review-physical-doors>span{height:140px;padding:5px 4px 30px;border-width:4px}
+}
+@media(max-width:600px){
+    .route-intentions{grid-template-columns:1fr}
+    .editorial-reading-nav>a{flex:1 1 calc(50% - 7px);justify-content:center}
+    .editorial-story{scroll-margin-top:140px}
+}
+@media(prefers-reduced-motion:reduce){
+    .studio-collage .studio-door:hover,.gateway-with-details .portal-door.is-active{transform:none}
+}

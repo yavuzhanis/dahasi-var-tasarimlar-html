@@ -1,0 +1,36 @@
+DAHASI VAR! — HTML TASARIM SUNUMU
+
+Açılış sayfası: index.html (altı tasarımın listesi)
+alternatif-1.html: Açık Atölye
+alternatif-2.html: Gece Kampüsü
+alternatif-3.html: Yeni Sayfa
+alternatif-4.html: Kendi Rotan
+alternatif-5.html: Dört Kapı — localhost:8000 projesinden, detaylar ve sorular dahil
+alternatif-6.html: Dört Kemer — kemerli giriş ve aynı sayfada dört programın detayları
+kesfet.html: Ortak program tanıtım sayfası
+
+DOSYALARI YAYINA ALMA
+ZIP'i açın. index.html ve assets klasörü aynı seviyede kalmalıdır.
+sunum-html klasörünün içeriğini statik barındırmaya yükleyin.
+HTML/CSS/JavaScript dosyaları hazırdır; PHP, Node.js, veritabanı veya derleme gerekmez.
+Göreli dosya yolları sayesinde alt klasörde barındırma da desteklenir.
+Yerelde index.html dosyasını açabilir veya bu klasörde python3 -m http.server 8091
+çalıştırarak http://localhost:8091 adresinden bakabilirsiniz.
+
+KAMPANYA SEÇİMLERİ
+Her tasarımın -yandal.html, -mikro.html, -sem.html, -kariyer.html sürümleri de dahildir.
+Bu dosyalar PHP sorgu parametresi gerektirmeden ilk program seçimini korur.
+Yeni Sayfa'daki kapak bağlantıları JavaScript kapalıyken de bu dosyalara gider.
+
+İÇERİK VE BAĞLANTILAR
+Bu sunum, dışa aktarma anındaki içeriğin kopyasıdır. Program detayları ve
+kapı animasyonları dahildir. Resmî program butonları doğrudan ilgili üniversite
+sayfalarına gider. Yönetim paneli, veritabanı, parolalar ve sunucu analitiği
+pakete dahil değildir. İçerik değiştiğinde python3 bin/export-static.py ile
+paketi yeniden oluşturun. Sunum sayfaları arama motorları için noindex işaretlidir.
+Fotoğraflar kampanya için hazırlanmış temsili görsellerdir.
+
+KÜN KARİYER
+Dördüncü seçenek: KÜN Kariyer. Resmî adres: https://kariyer.kapadokya.edu.tr/
+Tanıtım metinleri başlangıç içeriğidir; sonradan düzenlenebilir. İş ve staj fırsatları, kariyer etkinlikleri ve danışmanlık anlatılır.
+Kariyer fotoğrafının kaynağı: https://kariyer.kapadokya.edu.tr/wp-content/uploads/2024/07/working-day-in-office-.jpg

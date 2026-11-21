@@ -1,0 +1,4 @@
+.presentation-return{position:fixed;right:16px;bottom:16px;z-index:30;font:700 14px/1.4 Arial,sans-serif}
+.presentation-return a{display:flex;align-items:center;min-height:44px;padding:11px 17px;background:#fff;color:#09264d;text-decoration:none;border:1px solid #09264d40;border-radius:4px;box-shadow:0 4px 18px #09264d20}
+.presentation-return a:focus-visible{outline:3px solid #93328e;outline-offset:4px}
+@media print{.presentation-return{display:none}}
